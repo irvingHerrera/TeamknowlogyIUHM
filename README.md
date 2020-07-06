@@ -30,8 +30,19 @@ En el siguiente link, cuando se envia una cadena de adn, el servico implementado
 En caso contrario(no encuentra la mutación) responde con un **403-Forbidden**  
 
  https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation
- 
- 
+ {
+   "DNA":[
+       "ATGCGA",
+       "CAGTGC",
+       "TTATTT",
+       "AGACGG",
+       "GCGTCA",
+       "TCACTG"
+]}
+
+**NOTA** 
+Ejemplos de cadena usanso postam para testear la url propocionada. 
+
 ### 2.- Estadisticas de verificación
 
 En el siguiente link, de acuerdo a los registros almacenados en BD,  se devuelva un JSON con las estadísticas de las verificaciones de ADN (proporción estadistica).
