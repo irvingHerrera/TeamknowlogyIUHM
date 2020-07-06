@@ -25,22 +25,24 @@ String[] dna = {"ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"}
 
 ### 1.- Encontrar Mutación
 
-En el siguiente link, cuando se envia una cadena de adn, el servico de mutacion responde con **HTTP 200-OK** cuando encuentra mutacion
+En el siguiente link, cuando se envia una cadena de adn, el servico implementado responde con **HTTP 200-OK** cuando encuentra una mutación.
 
-En caso contrario(no encentra la mutación) responde con un **403-Forbidden**  
+En caso contrario(no encuentra la mutación) responde con un **403-Forbidden**  
 
  https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation
  
  
 ### 2.- Estadisticas de verificación
 
-En el siguiente link, de acuerdo a los registros almacenado en BD,  se devuelva un JSON con las estadísticas de las verificaciones de ADN
+En el siguiente link, de acuerdo a los registros almacenados en BD,  se devuelva un JSON con las estadísticas de las verificaciones de ADN (proporción estadistica).
+
+Fórmula implementada : num. de casos con mutación/num. de casos sin mutación
 
 https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
 
 
 
-#Requisitos de Instalación
+# Requisitos de Instalación
 
 ### 1.- Node js
 
