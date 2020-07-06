@@ -69,15 +69,16 @@ https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
 ### Descargar el proyecto
 https://github.com/irvingHerrera/TeamknowlogyIUHM/
 
-después de descargar el proyecto hay que realizar la instalación de las dependencias del proyecto con el siguiente comando "npm i"
+### Instalación de dependencias
+ npm i
 
-### Ejecucion ambiente desarrollo con nodemon
+### Ejecución ambiente desarrollo con nodemon
  npm start
  
-### Ejecucion de pruebas con mocha
+### Ejecución de pruebas con mocha
  npm test 
  
-### Ejecucion de coverage con nyc
+### Ejecución de coverage con nyc
  npm coverage
 
 
