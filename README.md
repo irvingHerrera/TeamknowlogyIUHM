@@ -20,19 +20,32 @@ String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 Cadena sin Mutación:
 String[] dna = {"ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"}
 
-** Pruebas de funcionalidad: ** 
+**Pruebas de funcionalidad:** 
+
+### 1.- Encontrar Mutación
+
 En el siguiente link, cuando se envia una cadena de adn, el servico de mutacion responde con **HTTP 200-OK** cuando encuentra mutacion
 
 En caso contrario(no encentra la mutación) responde con un **403-Forbidden**  
+
  https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation
  
+ 
+### 2.- Estadisticas de verificación
+
+En el siguiente link, de acuerdo a los registros almacenado en BD,  se devuelva un JSON con las estadísticas de las verificaciones de ADN
+
+https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
+
+
+
 #Requisitos de Instalación
 
-Node js
+### 1.- Node js
 
-NPM
+### 2.- NPM
 
-Mongo DB
+### 3.- Mongo DB
 
 
 ### Descargar el proyecto
