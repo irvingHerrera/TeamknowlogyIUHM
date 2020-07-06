@@ -11,16 +11,17 @@ de (NxN) con la secuencia del ADN.
 
 - Existe una validación que sólo permite recibir bases nitrogenadas válidas.
 
-- El algoritmo determinará que existe una mutación si se encuentra más de una secuencia de cuatro letras iguales, de forma diagonal, horizontal o vertical
+- El algoritmo determinará que existe una mutación si se encuentra más de una secuencia de cuatro letras iguales, de forma diagonal, horizontal o vertical.
 
 Ejemplo:
+
 Cadena con Mutación:
 String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 
 Cadena sin Mutación:
 String[] dna = {"ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"}
 
-**Pruebas de funcionalidad:** 
+# Pruebas de funcionalidad:
 
 ### 1.- Encontrar Mutación
 
