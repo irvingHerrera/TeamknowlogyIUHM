@@ -9,9 +9,14 @@ de (NxN) con la secuencia del ADN.
 
 - Las letras de los Strings solo pueden ser: (A,T,C,G), las cuales representa cada base nitrogenada del ADN.
 
-- Existe una validación para que sólo permite recibir bases nitrogenadas válidas.
+- Existe una validación que sólo permite recibir bases nitrogenadas válidas.
 
 - Existe una mutación si se encuentra más de una secuencia de cuatro letras iguales, de forma oblicua (diagonal), horizontal o vertical
+
+Ejemplo (Caso mutación):
+
+String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
+
 
 #Requisitos de Instalación
 
