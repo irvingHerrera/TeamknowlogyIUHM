@@ -1,6 +1,6 @@
 # TeamknowlogyIUHM
 
-Con esta API implementada en Node js y MogngoDB es posible detectar si una persona tiene diferencias genéticas basándose en su secuencia de ADN. 
+Con esta API REST implementada en Node js y MogngoDB es posible detectar si una persona tiene diferencias genéticas basándose en su secuencia de ADN. 
 
 Consideraciones :
 
@@ -11,13 +11,21 @@ de (NxN) con la secuencia del ADN.
 
 - Existe una validación que sólo permite recibir bases nitrogenadas válidas.
 
-- Existe una mutación si se encuentra más de una secuencia de cuatro letras iguales, de forma oblicua (diagonal), horizontal o vertical
+- El algoritmo determinará que existe una mutación si se encuentra más de una secuencia de cuatro letras iguales, de forma diagonal, horizontal o vertical
 
-Ejemplo (Caso mutación):
-
+Ejemplo:
+Cadena con Mutación:
 String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
 
+Cadena sin Mutación:
+String[] dna = {"ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"}
 
+** Pruebas de funcionalidad: ** 
+En el siguiente link, cuando se envia una cadena de adn, el servico de mutacion responde con **HTTP 200-OK** cuando encuentra mutacion
+
+En caso contrario(no encentra la mutación) responde con un **403-Forbidden**  
+ https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation
+ 
 #Requisitos de Instalación
 
 Node js
@@ -29,3 +37,5 @@ Mongo DB
 
 ### Descargar el proyecto
 https://github.com/irvingHerrera/TeamknowlogyIUHM/
+
+
