@@ -65,4 +65,6 @@ https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
 ### Descargar el proyecto
 https://github.com/irvingHerrera/TeamknowlogyIUHM/
 
+después de descargar el proyecto hay que realizar la instalación de las dependencias del proyecto con el siguiente comando "npm i"
+
 
