@@ -29,7 +29,10 @@ En el siguiente link, cuando se envia una cadena de adn, el servico implementado
 
 En caso contrario(no encuentra la mutación) responde con un **403-Forbidden**  
 
+servicio tipo POST
  https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation
+ 
+ Cuerpo del mensaje:
  {
    "DNA":[
        "ATGCGA",
@@ -49,6 +52,7 @@ En el siguiente link, de acuerdo a los registros almacenados en BD,  se devuelva
 
 Fórmula implementada : num. de casos con mutación/num. de casos sin mutación
 
+Servicio tipo GET
 https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
 
 
