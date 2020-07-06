@@ -2,6 +2,7 @@
 const { ADN_WORD } = require('../config/config');
 const MutationDB = require('../models/mutation');
 
+// funtion callback of the states mutation
 function mutation(req, res) {
     const {dna} = req.body;
     const isMutation = hasMutation(dna || []);
@@ -17,6 +18,7 @@ function mutation(req, res) {
     }
 }
 
+// funtion callback of the states service
 async function stats(req, res) {
     
     MutationDB.find()
@@ -38,6 +40,7 @@ async function stats(req, res) {
       }
 }
 
+// function whose purpose is to save the analyzed DNA
 function saveADN(isMutation, adn) {
     const mutationDB = new MutationDB();
     mutationDB.isMutation = isMutation;
@@ -47,6 +50,7 @@ function saveADN(isMutation, adn) {
     });
 }
 
+// function that has the purpose of verifying if the DNA has a mutation
 function hasMutation(data) {
     let isMutation = false;
     const dataCompare = getDataCompare(data);
@@ -66,9 +70,11 @@ function hasMutation(data) {
     return isMutation;
 }
 
+// function whose purpose is to obtain all the string, verticals, horizontals and diagonals of the DNA sequence
 function getDataCompare(data) {
     const lengthRow = data[0].length;
     const dataCompare = [];
+    dataCompare.concat(data);
 
     for(let index=0; index<lengthRow; index++) {
         let concat = '';
@@ -132,7 +138,8 @@ function getDataCompare(data) {
             dataCompare.push(concat);
         }
     }
-
+    console.log(dataCompare);
+    
     return dataCompare;
 }
 
