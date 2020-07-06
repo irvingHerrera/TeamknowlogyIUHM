@@ -1,6 +1,6 @@
 # TeamknowlogyIUHM
 
-Con esta API REST implementada en Node js y MogngoDB es posible detectar si una persona tiene diferencias genéticas basándose en su secuencia de ADN. 
+Con esta API REST implementada en Nodejs y MongoDB es posible detectar si una persona tiene diferencias genéticas basándose en su secuencia de ADN. 
 
 Consideraciones :
 
@@ -43,8 +43,48 @@ servicio tipo POST
        "TCACTG"
 ]}
 
-**NOTA** 
-Ejemplos de cadena usanso postam para testear la url propocionada. 
+**Ejemplo json postman** 
+{
+	"info": {
+		"_postman_id": "d2938b30-d688-4f23-8f8d-3e8382dca52c",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\":[\r\n            \"ATGCGA\",\r\n    \"CAGTGC\",\r\n    \"TTATTT\",\r\n    \"AGACGG\",\r\n    \"GCGTCA\",\r\n    \"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://teamknowlogyiuhm.azurewebsites.net/api/v1/mutation",
+					"protocol": "https",
+					"host": [
+						"teamknowlogyiuhm",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"mutation"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
 
 ### 2.- Estadisticas de verificación
 
@@ -55,7 +95,39 @@ Fórmula implementada : num. de casos con mutación/num. de casos sin mutación
 Servicio tipo GET
 https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats
 
-
+**Ejemplo json postman** 
+{
+	"info": {
+		"_postman_id": "d2938b30-d688-4f23-8f8d-3e8382dca52c",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamknowlogyiuhm.azurewebsites.net/api/v1/stats",
+					"protocol": "https",
+					"host": [
+						"teamknowlogyiuhm",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
 
 # Requisitos de Instalación
 
