@@ -5,7 +5,6 @@ const MutationDB = require('../models/mutation');
 // funtion callback of the states mutation
 function mutation(req, res) {
     const {dna} = req.body;
-
     if(!isMatrizValid(dna)) {
         return res.status(500).json({
             success: false,
@@ -73,7 +72,9 @@ function hasMutation(data) {
     ADN_WORD.forEach(word => {
         dataCompare.forEach(sequence => {
             const count = (sequence.match(word) || []).length;
-            if(count >= 4) {
+            if(count >= 1) {
+                //console.log('########----######', sequence);
+                
                 coincidences++;
             }
         });
@@ -86,18 +87,23 @@ function hasMutation(data) {
 // function whose purpose is to obtain all the string, verticals, horizontals and diagonals of the DNA sequence
 function getDataCompare(data) {
     const lengthRow = data[0].length;
-    const dataCompare = [];
-    dataCompare.concat(data);
+    const dataCompare = data;
+    //console.log('#####horizontal#####');
+//console.log(data);
 
+    //console.log('#####vertical#####');
     for(let index=0; index<lengthRow; index++) {
         let concat = '';
         for(let item in data) {
             concat+=data[item][index];
         }
         dataCompare.push(concat);
+        //console.log(concat);
     }
+//console.log('eeeeeee', dataCompare);
 
     //up /
+    //console.log('##### //up / #####');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -107,12 +113,15 @@ function getDataCompare(data) {
                 concat += data[x][y+aux];
                 aux++;
             }
-            if(!dataCompare.includes(concat))
+            if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
+                //console.log(concat);
+            }
         }
     }
 
     //down /
+    //console.log('##### down /#####');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -122,13 +131,17 @@ function getDataCompare(data) {
                 concat += data[x][aux];
                 aux++;
             }
-            if(!dataCompare.includes(concat))
+            if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
+                //console.log(concat);
+            }
         }
     }
 
     //up \
+    //console.log('###### //up 1 #######');
     for(let y=0; y<lengthRow; y++) {
+
         let concat = '';
         let aux = 0;
         if((lengthRow)-y >= 4) {
@@ -136,12 +149,16 @@ function getDataCompare(data) {
                 concat += data[x][y+aux];
                 aux++;
             }
-            if(!dataCompare.includes(concat))
+            if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
+                //console.log(concat);
+            }
+                
         }
     }
 
     //up \
+    //console.log('###### //up 2 #######');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -151,8 +168,11 @@ function getDataCompare(data) {
                 concat += data[x-y][aux];
                 aux++;
             }
-            if(!dataCompare.includes(concat))
+            if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
+                //console.log(concat);
+            }
+                
         }
     }
     //console.log(dataCompare);

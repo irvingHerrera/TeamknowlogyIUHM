@@ -3,7 +3,7 @@ const IP_SERVER = 'localhost';
 const PORT_DB = 27017;
 const PORT_SERVER = 3000;
 // string ADN
-const ADN_WORD = [/A/g,/T/g,/C/g,/G/g];
+const ADN_WORD = [/AAAA/g,/TTTT/g,/CCCC/g,/GGGG/g];
 const ADN_REGEX = ['[ATCG]'];
 
 module.exports = {
