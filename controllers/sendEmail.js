@@ -7,7 +7,7 @@ const { PROVIDER_EMAil, GMAIL, YAHOO, OUTLOOK } = require('../config/providerEma
 async function sendEmail(req, res) {
 
   const body = req.body;
-  const transportConfig = getProvider(body.provider || PROVIDER_EMAil.gmail);
+  const transportConfig = getProvider(body.provider || PROVIDER_EMAil.yahoo);
 
   const payload = {
       from: transportConfig.auth.user,

@@ -4,7 +4,7 @@ const GMAIL = {
     secure: false,
     auth: {
         user: 'irving.herreramolina@gmail.com',
-        pass: 'basix123',
+        pass: '',
     },
     tls: {
         rejectUnauthorized: false
