@@ -7,7 +7,7 @@ const { PROVIDER_EMAil, GMAIL, YAHOO, OUTLOOK } = require('../config/providerEma
 async function sendEmail(req, res) {
 
   const body = req.body;
-  const transportConfig = getProvider(body.provider || PROVIDER_EMAil.yahoo);
+  const transportConfig = getProvider(body.provider || PROVIDER_EMAil.gmail);
 
   const payload = {
       from: transportConfig.auth.user,
@@ -21,29 +21,29 @@ async function sendEmail(req, res) {
           cid: 'unique@logo.png' //same cid value as in the html img src
       },
       {
-        filename: 'facebook.svg',
-        path: path.join(path.dirname(require.main.filename) + '/template/images/facebook.svg'),
-        cid: 'unique@facebook.svg' //same cid value as in the html img src
+        filename: 'facebook.png',
+        path: path.join(path.dirname(require.main.filename) + '/template/images/facebook.png'),
+        cid: 'unique@facebook.png' //same cid value as in the html img src
       },
       {
-        filename: 'twitter.svg',
-        path: path.join(path.dirname(require.main.filename) + '/template/images/twitter.svg'),
-        cid: 'unique@twitter.svg' //same cid value as in the html img src
+        filename: 'twitter.png',
+        path: path.join(path.dirname(require.main.filename) + '/template/images/twitter.png'),
+        cid: 'unique@twitter.png' //same cid value as in the html img src
       },
       {
-        filename: 'youtube.svg',
-        path: path.join(path.dirname(require.main.filename) + '/template/images/youtube.svg'),
-        cid: 'unique@youtube.svg' //same cid value as in the html img src
+        filename: 'youtube.png',
+        path: path.join(path.dirname(require.main.filename) + '/template/images/youtube.png'),
+        cid: 'unique@youtube.png' //same cid value as in the html img src
       },
       {
-        filename: 'google.svg',
-        path: path.join(path.dirname(require.main.filename) + '/template/images/google.svg'),
-        cid: 'unique@google.svg' //same cid value as in the html img src
+        filename: 'google.png',
+        path: path.join(path.dirname(require.main.filename) + '/template/images/google.png'),
+        cid: 'unique@google.png' //same cid value as in the html img src
       },
       {
-        filename: 'linkedin.svg',
-        path: path.join(path.dirname(require.main.filename) + '/template/images/linkedin.svg'),
-        cid: 'unique@linkedin.svg' //same cid value as in the html img src
+        filename: 'linkedin.png',
+        path: path.join(path.dirname(require.main.filename) + '/template/images/linkedin.png'),
+        cid: 'unique@linkedin.png' //same cid value as in the html img src
       }
     ]
   };
