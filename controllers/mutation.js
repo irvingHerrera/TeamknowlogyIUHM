@@ -73,14 +73,10 @@ function hasMutation(data) {
         dataCompare.forEach(sequence => {
             const count = (sequence.match(word) || []).length;
             if(count >= 1) {
-                //console.log('########----######', sequence);
-                
                 coincidences++;
             }
         });
     });
-    //console.log('coincidences', coincidences);
-    
     return coincidences > 1;
 }
 
@@ -88,22 +84,15 @@ function hasMutation(data) {
 function getDataCompare(data) {
     const lengthRow = data[0].length;
     const dataCompare = data;
-    //console.log('#####horizontal#####');
-//console.log(data);
-
-    //console.log('#####vertical#####');
     for(let index=0; index<lengthRow; index++) {
         let concat = '';
         for(let item in data) {
             concat+=data[item][index];
         }
         dataCompare.push(concat);
-        //console.log(concat);
     }
-//console.log('eeeeeee', dataCompare);
 
     //up /
-    //console.log('##### //up / #####');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -115,13 +104,11 @@ function getDataCompare(data) {
             }
             if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
-                //console.log(concat);
             }
         }
     }
 
     //down /
-    //console.log('##### down /#####');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -133,13 +120,11 @@ function getDataCompare(data) {
             }
             if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
-                //console.log(concat);
             }
         }
     }
 
     //up \
-    //console.log('###### //up 1 #######');
     for(let y=0; y<lengthRow; y++) {
 
         let concat = '';
@@ -151,14 +136,12 @@ function getDataCompare(data) {
             }
             if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
-                //console.log(concat);
             }
                 
         }
     }
 
     //up \
-    //console.log('###### //up 2 #######');
     for(let y=0; y<lengthRow; y++) {
         let concat = '';
         let aux = 0;
@@ -170,12 +153,10 @@ function getDataCompare(data) {
             }
             if(!dataCompare.includes(concat)) {
                 dataCompare.push(concat);
-                //console.log(concat);
             }
                 
         }
     }
-    //console.log(dataCompare);
     
     return dataCompare;
 }
